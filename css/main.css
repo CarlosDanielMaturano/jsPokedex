@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: hsl(0, 5%, 92%);
+}
+.top-bar{
+    text-align: center;
+    width: 600px;
+    margin: auto;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-bar input{
+    margin-right: 20px;
+    width: 400px;
+    height: 40px;
+    font-size: 30px;
+    outline: none;
+    border: none;
+    color: grey;
+    padding: 10px;
+}
+.top-bar input::placeholder{
+    font-size: 20px;
+    margin: 4px;
+    color: rgb(191, 191, 191);
+    font-weight: 100;
+}
+
+.top-bar button{
+    padding: 20px;
+    outline: none;
+    background-color: rgb(20, 195, 255);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-weight: bolder;
+    color: white;   
+}
+
+.main-content{
+    margin: auto;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+}
+.card{
+    margin: 2rem;
+    width: 300px;
+    height: 500px;
+    border-radius: 10px;
+    overflow-y: hidden;
+}
+.main-card{
+    padding: 1.5rem;
+}
+
+.card .pokemon-image{
+    display: flex;
+    justify-content: center;    
+}
+.card .pokemon-id{
+    display: flex;
+    justify-content: right;
+}
+.card .pokemon-id p{
+    font-weight: bolder;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
+.card img{
+    width: 250px;
+    height: 250px;
+}
+.card .pokemon-name{
+    text-align: center;
+    text-transform: capitalize;
+}
+.card .types{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.card .types p{
+    text-align: center  ;
+    width: 70px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    font-weight: bolder;
+    color: white;
+}
+.card .other-info{
+    transition: all .5s;
+    height: 500px;
+    color: white;
+}
+.card .other-info p{
+    padding: 10px;
+    font-weight: bolder;
+}
+.card .other-info h1{
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+.card .other-info .stat{
+    display: flex;
+    justify-content: space-between;
+}
+.card .other-info:hover{
+    transform: translatey(-90%);
+}
