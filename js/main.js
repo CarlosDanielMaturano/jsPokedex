@@ -21,6 +21,8 @@ const typeColors = {
     "fairy":    "#D685AD"
 }
 
+var pokemonCount = 16;
+
 function getPokemonInformation(pokemon){
     fetch(fetchLink + '/' + pokemon)
         .then((response) => {
@@ -106,4 +108,22 @@ function searchPokemon(){
     }
 }
 
-addPokemonsLimit(32);
+function addPokemons(number){
+    while(pokemonCount < pokemonCount + number){
+        pokemonCount++;
+        number--;
+        getPokemonInformation(pokemonCount);
+    }
+}
+
+// Infinite scroll 
+window.addEventListener('scroll', () => {
+
+    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+
+    if(clientHeight + scrollTop >= scrollHeight - 10){
+        addPokemons(4);
+    }
+});
+
+addPokemonsLimit(pokemonCount);
