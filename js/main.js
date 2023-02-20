@@ -21,7 +21,7 @@ form.addEventListener('submit', (event) => {
 
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max)
 
-const maximumPokemonCount = 721 // The api provides consistent information only about pokemons until gen 7
+const maximumPokemonCount = 1008 // The api provides consistent information only about pokemons until gen 9
 
 const buttons = document.querySelectorAll(".action-button")
 buttons.forEach( button => button.addEventListener('click', function() {
