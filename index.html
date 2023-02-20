@@ -4,17 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedex</title>
+    <title>True Pokedex</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div class="top-bar">
-        <input id="pokemon-name" placeholder="Search a pokemon by name or id">
-        <button type="submit" onclick="searchPokemon()">SEARCH</button>
+        <form id="form">
+            <input id="pokemon-name" placeholder="Search a pokemon by name or id">
+            <button type="submit" id="search-button">SEARCH</button>
+        </form>
     </div>
-    <div class="main-content" id="main-content"></div>
+    <div class="main-content" id="main-content">
+        <div class="button-div">
+            <button value="-1" class="action-button">
+                <i class="fa-solid fa-circle-left"></i>
+            </button>
+        </div>
+        <div id="pokemon-card"></div>
+        <div class="button-div">
+            <button value="1" class="action-button">
+                <i class="fa-solid fa-circle-right"></i>
+            </button>
+        </div>
+    </div>
 <script src="js/main.js">
 </script>
-</script>
+<script src="js/createCard.js"></script>
 </body>
 </html>

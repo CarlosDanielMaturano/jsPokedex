@@ -3,8 +3,14 @@
     margin: 0;
     font-family: "Poppins", sans-serif;
 }
+
+:root {
+    --primary-color:  	#0090d6;
+    --background-color: #93c6ff;
+}
+    
 body{
-    background-color: hsl(0, 5%, 92%);
+    background-color: var(--background-color);
 }
 .top-bar{
     text-align: center;
@@ -35,7 +41,7 @@ body{
 .top-bar button{
     padding: 20px;
     outline: none;
-    background-color: rgb(20, 195, 255);
+    background-color: var(--primary-color);
     outline: none;
     border: none;
     border-radius: 10px;
@@ -58,29 +64,35 @@ body{
     height: 500px;
     border-radius: 10px;
     overflow-y: hidden;
+    background-color: White;
+    display: flex;
+    flex-direction: column;
 }
-.main-card{
-    padding: 1.5rem;
-}
-
 .card .pokemon-image{
     display: flex;
     justify-content: center;    
+    align-self: center;
+   
 }
+.card .pokemon-image img {
+    width: 250px;
+    height: 250px;
+}
+
 .card .pokemon-id{
     display: flex;
     justify-content: right;
+    margin: 10px;
 }
 .card .pokemon-id p{
     font-weight: bolder;
     background-color: white;
     padding: 10px;
     border-radius: 20px;
+    align-self: flex-start;
+    height: fit-content;
 }
-.card img{
-    width: 250px;
-    height: 250px;
-}
+
 .card .pokemon-name{
     text-align: center;
     text-transform: capitalize;
@@ -103,9 +115,10 @@ body{
     transition: all .5s;
     height: 500px;
     color: white;
+    padding-bottom: 40px;
 }
 .card .other-info p{
-    padding: 10px;
+    padding:0px;
     font-weight: bolder;
 }
 .card .other-info h1{
@@ -116,7 +129,28 @@ body{
 .card .other-info .stat{
     display: flex;
     justify-content: space-between;
+    margin: 10px;
 }
 .card .other-info:hover{
-    transform: translatey(-90%);
+    transform: translatey(-240px);
+}
+
+.button-div {
+    width: 300px;
+    height: 300px;
+    margin: auto 10px auto 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.action-button {
+    padding: 10px;
+    border-radius: 10px;
+    margin: auto;
+    font-size: 75px;
+    background: none;
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    color: white;
 }
