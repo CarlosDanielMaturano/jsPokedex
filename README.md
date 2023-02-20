@@ -1,4 +1,4 @@
-#README.md
+
 A simple pokedex made with vanilla javascript that provides some information about the pokemon, such as: 
     type
     base status 
